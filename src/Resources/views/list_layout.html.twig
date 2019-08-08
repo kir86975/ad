@@ -1,0 +1,21 @@
+{% include 'main_layout.twig' %}
+
+<div class="add-button-div">
+    <button class="add-button" onclick='window.location = "{{ path('test') }}"'>Добавить объявление</button>
+    <button class="download-button" onclick='window.location = "{{ path('download') }}"'>Скачать объявления в csv</button>
+</div>
+<table class="ads-table">
+    <tr>
+        <th width="5%">id</th>
+        <th width="10%">Заголовок</th>
+        <th>Текст объявления</th>
+    <tr>
+
+        {% for item in items %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.title }}</td>
+        <td>{{ item.content }}</td>
+    </tr>
+    {% endfor %}
+</table>

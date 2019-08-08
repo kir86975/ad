@@ -1,0 +1,11 @@
+index:
+    path: /
+    controller: App\Controller\AdController::indexAction
+
+test:
+    path: /addAD
+    controller: App\Controller\AdController::addAction
+
+download:
+    path: /download
+    controller: App\Controller\AdController::downloadAction

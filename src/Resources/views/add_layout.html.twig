@@ -1,0 +1,21 @@
+{% include 'main_layout.twig' %}
+
+{% form_theme form _self %}
+
+{% block _ad_id %}
+    <div hidden>
+        {{ form_widget(form.id) }}
+    </div>
+{% endblock %}
+
+{{ form_start(form, {'attr': {'class': 'ad-form'}}) }}
+    <div>
+        {{ form_widget(form.title) }}
+    </div>
+    <div style="margin-top:10px">
+        {{ form_widget(form.content) }}
+    </div>
+
+    <button class="save-button">Сохранить</button>
+{{ form_end(form) }}
+
